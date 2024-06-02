@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>juego-teca</title>
+    <link rel="stylesheet" href="./assets/style.css">
+    <script src="https://unpkg.com/vue@3.0.11/dist/vue.global.js"></script>
+  </head>
+  <body>
+    
+    <div id="app">
+      <div class="nav-bar">Administracion de Juegos</div>
+    
+      <app-display @game-submitted="(updateGameList)"></app-display>
+      <regist-table ></regist-table>
+
+      <footer></footer>
+
+    </div>
+
+
+    <!-- import app-->
+    <script src="./main.js"></script>
+    <!-- import router-->
+
+    <!--import Components-->
+    <script src="./components/appDiplay.js"></script>
+    <script src="./components/RegistTable.js"></script>
+    
+    <!--moun app-->
+    <script>
+      const mountedApp = app.mount('#app')
+    </script>
+  </body>
+</html>
