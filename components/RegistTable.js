@@ -17,11 +17,11 @@ app.component('regist-table', {
       <th>Estado</th>
       <th>Rating</th>
     </tr>
-    <tr v-for="game in gamelist">
-      <th>{{game.name}}</th>
-      <th>{{game.platform}}</th>
-      <th>{{game.state}}</th>
-      <th>{{game.rating}}</th>
+    <tr >
+      <th>cars</th>
+      <th>play 2</th>
+      <th>completado</th>
+      <th>7</th>
     </tr>
     
   </table>
@@ -31,6 +31,8 @@ app.component('regist-table', {
   
   `,
 
-
+  methods:{
+    
+  },
   
 })
