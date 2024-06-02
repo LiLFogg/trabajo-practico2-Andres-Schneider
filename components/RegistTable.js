@@ -25,6 +25,7 @@ app.component('regist-table', {
     </tr>
     
   </table>
+  
   </div>
   
   
