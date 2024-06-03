@@ -1,3 +1,4 @@
+//import{gamelist} from './appDiplay.js';
 app.component('regist-table', {
   props:{
     gamelist:{

@@ -1,3 +1,4 @@
+
 app.component('app-display', 
 {
   template: 
@@ -6,7 +7,7 @@ app.component('app-display',
   <div class="form-regist"> 
   <form>
   <h3>Nuevo Juego</h3>
-  <p>por favor complete los siguentes campos:</p>
+  <p class="priority-camp">por favor complete los siguentes campos:</p>
 
   <label for="name">Nombre: </label>
   <input type="text" placeholder="Nombre" id="name" v-model="name"><br/>
@@ -23,22 +24,27 @@ app.component('app-display',
     <option>Pendiente</option>
     <option>jugando</option>
     <option>Completado</option>
-  </select><br/>
-
-  <label for="rating">Rating: </label>
-  <select  id="rating" v-model.number="rating">
-    <option>1</option>
-    <option>2</option>
-    <option>3</option>
-    <option>4</option>
-    <option>5</option>
-    <option>6</option>
-    <option>7</option>
-    <option>8</option>
-    <option>9</option>
-    <option>10</option>
   </select>
 
+  
+
+  <br/>
+
+  <div>
+    <label for="rating">Rating: </label>
+    <select  id="rating" v-model.number="rating">
+      <option>1</option>
+      <option>2</option>
+      <option>3</option>
+      <option>4</option>
+      <option>5</option>
+      <option>6</option>
+      <option>7</option>
+      <option>8</option>
+      <option>9</option>
+      <option>10</option>
+    </select>
+  </div>
 
   <button 
       class="button" 
@@ -74,6 +80,7 @@ methods:{
         state: this.state,
         rating: this.rating,
       }
+      
       this.$emit('game-submitted', gameRegist)
   
       this.name = ''
@@ -85,7 +92,7 @@ methods:{
   
   },
 
-  updateGameList(gameRegist) {
+  updateGameList (gameRegist)  {
     this.gamelist.push(gameRegist)
 
   },
@@ -95,3 +102,5 @@ methods:{
 
 
 })
+
+//export {gamelist}

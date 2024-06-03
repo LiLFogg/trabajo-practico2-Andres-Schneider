@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
   <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -11,22 +11,26 @@
     
     <div id="app">
       <div class="nav-bar">Administracion de Juegos</div>
-    
       <app-display @game-submitted="(updateGameList)"></app-display>
-      <regist-table ></regist-table>
-
+      <div class="grid">
+        <regist-table ></regist-table>
+        <details-box></details-box>
+      </div>
+      
+      
       <footer></footer>
 
     </div>
 
 
     <!-- import app-->
-    <script src="./main.js"></script>
+    <script src="./main.js" ></script>
     <!-- import router-->
 
     <!--import Components-->
-    <script src="./components/appDiplay.js"></script>
+    <script src="./components/appDiplay.js" ></script>
     <script src="./components/RegistTable.js"></script>
+    <script src="./components/DetailsBox.js"></script>
     
     <!--moun app-->
     <script>
